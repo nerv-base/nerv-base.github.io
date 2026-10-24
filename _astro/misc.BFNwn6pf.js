@@ -1,0 +1,1 @@
+function e(){document.querySelectorAll(`button[data-copy]`).forEach(e=>{e.dataset.copyBound||(e.dataset.copyBound=`1`,e.addEventListener(`click`,async()=>{let t=e.dataset.copy===`url`?location.href:e.dataset.copy;try{await navigator.clipboard.writeText(t);let n=e.textContent;e.textContent=`COPIED`,setTimeout(()=>e.textContent=n,1200)}catch{}}))})}export{e as mountCopy};
